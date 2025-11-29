@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archaeological Research Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-card">
+            <div class="header">
+                <div class="logo">
+                    <svg viewBox="0 0 100 100" class="artifact-icon" aria-hidden="true">
+                        <path d="M50 10 L60 30 L80 35 L70 50 L50 55 L30 50 L20 35 L40 30 Z" fill="#6B4423" opacity="0.9" />
+                        <circle cx="50" cy="35" r="8" fill="#A0522D" />
+                        <path d="M30 50 L50 55 L70 50" stroke="#5D4037" stroke-width="2" fill="none" />
+                    </svg>
+                </div>
+                <h1>Archaeological Research Portal</h1>
+                <p class="subtitle">Uncover Ancient Secrets</p>
+            </div>
+
+            <form id="loginForm" class="login-form" autocomplete="on">
+                <div class="form-group">
+                    <label for="username">
+                        <span class="label-icon">👤</span>
+                        Archaeologist Username
+                    </label>
+                    <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        placeholder="Enter your username (Test)"
+                        required
+                        autocomplete="username"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="password">
+                        <span class="label-icon">🔐</span>
+                        Access Password
+                    </label>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter your password (test12345)"
+                        required
+                        autocomplete="current-password"
+                    >
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <span>Begin Expedition</span>
+                    <span class="arrow">→</span>
+                </button>
+
+                <div id="errorMessage" class="error-message" role="alert" aria-live="polite"></div>
+            </form>
+
+            <div class="footer">
+                <p>© 2025 Lego Stormers</p>
+            </div>
+        </div>
+
+        <div class="background-pattern"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
