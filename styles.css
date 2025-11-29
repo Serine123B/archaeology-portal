@@ -1,0 +1,201 @@
+/* ---------------- GLOBAL FIXES ---------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* ---------------- BACKGROUND ---------------- */
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background: linear-gradient(135deg,
+        #3E2723 0%, 
+        #5D4037 25%,
+        #6D4C41 50%,
+        #5D4037 75%,
+        #4E342E 100%
+    );
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Subtle texture */
+.background-pattern {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        radial-gradient(circle at 20% 30%, rgba(139, 69, 19, 0.18), transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(160, 82, 45, 0.18), transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.03), transparent 60%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* ---------------- LOGIN CARD ---------------- */
+
+.container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 480px;
+    padding: 20px;
+}
+
+.login-card {
+    width: 100%;
+    background: rgba(245, 222, 179, 0.97);
+    border-radius: 20px;
+    padding: 32px 24px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(101, 67, 33, 0.7);
+}
+
+/* Artifact logo */
+.artifact-icon {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,0.5));
+}
+
+/* Title + subtitle */
+.header h1 {
+    font-size: 26px;
+    color: #3E2723;
+    margin-bottom: 4px;
+}
+
+.subtitle {
+    font-size: 13px;
+    color: #6D4C41;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+/* ---------------- FORM ---------------- */
+
+.form-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 6px;
+    color: #3E2723;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(121, 85, 72, 0.9);
+    background: rgba(255, 248, 225, 0.95);
+    font-size: 14px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #8D6E63;
+}
+
+/* ---------------- BUTTON ---------------- */
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(135deg,
+        #A0522D,
+        #8B4513
+    );
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    margin-top: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(135deg,
+        #BF6B30,
+        #A0522D
+    );
+}
+
+.footer {
+    margin-top: 18px;
+    font-size: 11px;
+    color: #6D4C41;
+}
+
+/* Error message */
+.error-message {
+    margin-top: 12px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid rgba(101, 67, 33, 0.7);
+    background: rgba(101, 67, 33, 0.2);
+    color: #3E2723;
+    font-size: 12px;
+    display: none;
+}
+
+.error-message.show {
+    display: block;
+}
+
+/* ---------------- MOBILE RESPONSIVE ---------------- */
+
+@media (max-width: 600px) {
+
+    body {
+        align-items: flex-start;
+        padding-top: 40px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .login-card {
+        padding: 24px 18px;
+    }
+
+    .artifact-icon {
+        width: 90px;
+        height: 90px;
+    }
+
+    .header h1 {
+        font-size: 22px;
+    }
+}
